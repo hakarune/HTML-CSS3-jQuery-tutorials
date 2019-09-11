@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" /> 
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="title" content="CSS3 & jQuery Tutorials" />
+		<meta name="description" content="jQuery and CSS3 tutorials for introduction to web design at WSUV (DTC355)" />
+		<meta name="keywords" content="jQuery, CSS3, HTML5, Tutorials, Introduction, Web Design, WSU, Vancouver" />
+		<meta name="language" content="en" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Trevor Elliott" />
+		<title>CSS3 & jQuery Tutorials</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" href="images/touch-icon-iphone.png" /> 
+		<link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png" /> 
+		<link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-iphone-retina.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad-retina.png" />
+		<link rel="stylesheet" type="text/css" media="screen and print" href="css/normalize.css" />
+		<link rel="stylesheet" href="style.css" media="css/handheld"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/print.css" />
+		<link href='https://fonts.googleapis.com/css?family=Euphoria+Script' rel='stylesheet' type='text/css'>
+		<!--[if (lt IE 9)&(!IEMobile)]>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<![endif]-->
+
+
+		<!-- Browser Compatability Waring -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="http://widget.browsercompatible.com/browser_detect.js"></script>
+
+		<script type="text/javascript">
+		function addMyWidget(){
+				BrowserDetect.supported = [{browserName: "Safari",browserVersion: 5.1},{browserName: "Chrome",browserVersion: 16.0},{browserName: "MSIE",browserVersion: 9001},{browserName: "Firefox",browserVersion: 11.0},{browserName: "Opera",browserVersion: 11.51}];
+				BrowserDetect.type = "footer";
+				BrowserDetect.detect();
+			}
+		$(document).ready(addMyWidget);
+		</script>
+		<!-- End Browser Compatability Waring -->
+
+		<!--[if IE]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<!-- Scripts and jQuery Links -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+			<script src="js/jquery.fittext.js"></script>
+		<!-- End Links and Scripts -->
+
+	</head>	
+	<body class="body">
+
+		<header>
+			<h1 id="fittext2">CSS3 & jQuery Tutorials</h1>
+
+			<script type="text/javascript">
+				$("#fittext2").fitText(1.5);
+			</script>
+			<div class="clock">
+				<div id="Date"></div>
+				<ul>
+					<li id="hours"></li>
+					<li id="point">:</li>
+					<li id="min"></li>
+					<li id="point">:</li>
+					<li id="sec"></li>
+				</ul>
+			</div>
+
+		</header>
+		<input type="radio" name="chk" id="toggle-1" checked="">
+		<label for="toggle-1" onclick="">jQuery</label>
+		<input type="radio" name="chk" id="toggle-2" >
+		<label for="toggle-2" onclick="">CSS3</label>
+		<input type="radio" name="chk" id="toggle-3">
+		<label for="toggle-3" onclick="">Plugins</label>
+		<input type="radio" name="chk" id="toggle-4" >
+		<label for="toggle-4" onclick="">Examples</label>
+		
+		
+
+		<article class="tutorial" id="container">
+				<aside id="jquery">
+					<div class="about jquery">
+						<h2>What is jQuery?</h2>
+						<p>Before you start studying jQuery, you should have a some basic knowledge of:</p>
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>JavaScript</li>
+						</ul>
+						<p>
+							jQuery is a lightweight, "write less, do more", JavaScript library. The purpose of jQuery is to make it much easier to use JavaScript on your website. jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code. jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+						</p>
+						<h3>Why?</h3>
+						<p>
+							One of the best uses of jQuery is the ability to modify pages and animate with little effort.
+							<br />
+							But the best use of jQuery is using plugins to acomplish advanced features such as: slideshows, touch swipe, paging, and more
+						</p>
+						<h3>How to Use</h3>
+						<p>
+							In order to use jQuery, you first need to link to a library in your header (using Google is a good option).
+						</p>
+						<xmp>
+	<head>
+	   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	</head>
+						</xmp>
+						<p>
+							Once you have linked the main jQuery library, you can now begin using jQuery coding or linking in plugins from other websites to create galleries and slideshows.
+						</p>
+						<h3>Coding</h3>
+						<p>
+							Once you have linked the jQuery library in your head you can begin using jQuery specific code.
+							<br /><br />
+							You always code inside the "<i>&lt;script&gt;</i>" tags. and the first line of your code will start with:
+							<br /><br />
+							<code class="code">
+								&nbsp;&nbsp;$(document).ready(function(){
+							</code>
+							<br /><br />
+							and will end with:
+							<code class="code">
+								&nbsp;&nbsp;});
+							</code>
+							<br /><br />
+							A basic code setup looks like this:
+						</p>
+						<xmp>
+	<script>
+		$(document).ready(function(){
+		   //Code here
+		});
+	</script>
+						</xmp>
+						<p>
+							For more information on commands and jQuery specific coding, go to there website: <a href="http://api.jquery.com/" target="_blank" rel="nofollow">jQuery Coding</a> or <a href="http://www.w3schools.com/jquery/jquery_syntax.asp" target="_blank" rel="nofollow">w3Schools</a> or view the examples for jQuery below.
+						</p>
+						<h3>Using Plugins</h3>
+						<p>
+							To use a jQuery plugin is fairly straight forward. You must first download and link the plugin in your header (or link directly from the developer's website). The developers of these plugins always have documentation and direct examples on how to setup and use their plugin (be sure to read carefully).
+						</p>
+						<xmp>
+	<head>
+	   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	   <script src="js/plugin.js"></script>
+	</head>
+						</xmp>
+						<p>
+							After you have linked to the plugin (that you either downloaded to your "js" folder or directly from their page), you just need to follow the code provided on the website or on the github repository. Developers provide you with the full html layout code and jQuery code (plus CSS code if it is needed) needed to use their plugin.
+						</p>
+						
+							<h3>For examples and some walkthroughs, view the tutorials below</h3>
+						
+					</div>
+					<div class="right">
+						<img src="images/jquery.jpg" alt="Keep Calm and Use jQuery" />
+						<span class="caption">  
+							<p>
+								<a href="http://cisoxp.deviantart.com/art/Keep-Calm-and-use-jQuery-297419295" target="_blank" rel="nofollow">&copy;CisoXP </a>
+							</p>  
+						</span> 
+					</div>
+				</aside>
+				<aside id="css3">    
+					<div class="about css3">
+						<h3>What is CSS3?</h3>
+						<p>
+							 “CSS3” simply refers to the latest incarnation of CSS, with additional capabilities far beyond the scope of the first two generations.
+						</p>
+						<h3>What Does It Do?</h3>
+						<p>
+							CSS3 allows developers to build content-rich web pages with relatively lightweight code requirements. A website that is not dependant on parsing JavaScript code or relying on Flash animations can load at much quicker speeds and still have the same effects and in some cases better. jQuery in some instances even relies on the animations and transitions of CSS3 to execute its design.
+							<br />
+							Using CSS3 allows designers to be able to create multi-column layouts, border effects, gradients, shadows, and more. Ther is no special pieces of code to include, there isn't anything special that has to be downloaded; it's all just based on simple browser supported functions. 
+							<br />
+							
+							CSS3 has many new modules that build on the old ones, and some that are completely new. Some of the most important newer modules are:
+							<ul>
+								<li>Selectors</li>
+								<li>Box Model</li>
+								<li>Backgrounds and Borders</li>
+								<li>Image Values and Replaced Content</li>
+								<li>Text Effects</li>
+								<li>2D/3D Transformations</li>
+								<li>Animations</li>
+								<li>Multiple Column Layout</li>
+								<li>User Interface</li>
+							</ul>
+						</p>
+						<h3>Warnings</h3>
+						<p>
+							All modern browsers support most parts of CSS3, but older browsers like, IE8 and below, do not. The more advanced uses might not work on some newer browsers even, use it carefully.
+							<br /><br />
+							Using CSS3 over jQuery can create faster load times of a website and cut down on the website becoming slow. CSS3 or jQuery both put stress on a users browser and computer and both can slow or stop the computer.
+							<br /><br />
+							All animations and transitions on this site are primarily CSS3, as well as there are only 3 images used on the site; as a whole, the core functionality of this site is all CSS3 and HTML (jQuery is sparingly used).
+							<br />
+							You can even create very cool looking button, links, or elements in CSS3 like <a href="http://hellohappy.org/css3-buttons/" rel="nofollow" target="_blank">here</a> and <a href="http://www.techrepublic.com/blog/web-designer/create-cool-stitched-effects-with-css3/" rel="nofollow" target="_blank">here</a>.  
+						</p>
+					</div>
+					<div class="right">
+						<img src="images/HTML5CSS3.png" alt="HTML5+CSS3" />
+						<span class="caption">  
+							<p>
+								HTML5 + CSS3
+							</p>  
+						</span> 
+					</div>
+
+				</aside>
+				<aside id="plugins">
+					<h1>A List of jQuery Plugins</h1>
+					<div class="about plugins">
+						<p>Here are several very useful and great jQuery plugins that can be used to fit your projects.</p>
+						<h3>Galleries</h3>
+						<ul>
+							<li>
+								<a href="http://www.jacklmoore.com/colorbox/" rel="nofollow" target="_blank">Colorbox</a> - Created by <a href="http://www.jacklmoore.com/" rel="nofollow" target="_blank">Jack Moore</a> - A replacement for lightbox (it's more flexible, allowing more than just images).
+							</li>
+							<li>
+								<a href="http://fancyapps.com/fancybox/" rel="nofollow" target="_blank">FancyBox</a> - Created by <a href="http://fancyapps.com" rel="nofollow" target="_blank">Jānis Skarnelis</a> - A simple and lightweight and very useful image displayer. It's sleek and super effective, offers a lot of functionality.
+							</li>
+							<li>
+								<a href="http://caroufredsel.dev7studios.com/" rel="nofollow" target="_blank">CarouFredsel</a> - Created by <a href="http://www.frebsite.nl/en.php" rel="nofollow" target="_blank">Fred</a> -  It will turn any HTML element and add it to a carousel gallery.
+							</li>
+						</ul>
+						
+						<h3>Slider & Slideshows</h3>
+						<ul>
+							<li>
+								<a href="http://swipejs.com/" rel="nofollow" target="_blank">Swipejs</a> - Created by <a href="http://bradbirdsall.com/" rel="nofollow" target="_blank">Brad Birdsall</a> - Super accurate touch based and swipe image slider. 
+							</li>
+							<li>
+								<a href="http://unslider.com/" rel="nofollow" target="_blank">UnSlider</a> - Created by <a href="http://visualidiot.com/" rel="nofollow" target="_blank">Visual Idiot</a> - The jQuery slider that just slides; it just works.
+							</li>
+							<li>
+								<a href="http://slidesjs.com/" rel="nofollow" target="_blank">Slide.js</a> - Created by <a href="http://nathansearles.com/" rel="nofollow" target="_blank">Nathan Searles</a> and is one of the simplest and most straightforward image sliders. [used in example II]
+							</li>
+							<li>
+								<a href="http://mightyslider.com/" rel="nofollow" target="_blank">Mighty Slider</a> - Created by <a href="http://iprodev.com/" rel="nofollow" target="_blank">Hemn Chawroka</a> - An awesome and very amazing image/content slider (even supports fullscreen, very dynamic). He has other plugins that are great on his site too. 
+							</li>
+							
+						</ul>
+						
+						<h3>Navigations</h3>
+						<ul>
+							<li>
+								<a href="http://mmenu.frebsite.nl/" rel="nofollow" target="_blank">mmenu</a> - Created by <a href="http://www.frebsite.nl/en.php" rel="nofollow" target="_blank">Fred</a> - A jQuery plugin for creating slick, Facebook Mobile look-alike sliding responsive menus for you mobile websites
+							</li>
+							<li>
+								<a href="http://www.turnjs.com/" rel="nofollow" target="_blank">Turn.js</a> - Created by <a href="https://github.com/blasten" rel="nofollow" target="_blank">Emmanuel García</a> - Create a book like, turn the page, style to your website. Touch supported.
+							</li>
+							<li>
+								<a href="http://www.turnjs.com/" rel="nofollow" target="_blank">Turn.js</a> - Created by <a href="https://github.com/blasten" rel="nofollow" target="_blank">Emmanuel García</a> - Create a book like, turn the page, style to your website. Touch supported.
+							</li>
+							
+							<li>
+								<a href="http://www.berriart.com/sidr/" rel="nofollow" target="_blank">Sidir</a> - Created by <a href="http://albertovarelasanchez.com/" rel="nofollow" target="_blank">Alberto Varela</a> - Creates excellent sliding and responsive navigation menus.
+							</li>
+						</ul>
+						
+						<h3>Text Effects</h3>
+						<ul>
+							<li>
+								<a href="http://fittextjs.com/" rel="nofollow" target="_blank">FitText.js</a> - Created by <a href="http://paravelinc.com/" rel="nofollow" target="_blank">Paravel</a> - an awesome text size adjust for headers and headings; to be used in responsive design pages [used on this website].
+							</li>
+							<li>
+								<a href="http://jschr.github.io/textillate/" rel="nofollow" target="_blank">textillate.js</a> - Created by <a href="https://github.com/jschr" rel="nofollow" target="_blank">Jordan Schroter</a> - combines some awesome libraries to provide a ease-to-use plugin for applying CSS3 animations to any text.
+							</li>
+							<li>
+								<a href="http://tutorialzine.com/2010/07/colortips-jquery-tooltip-plugin/" rel="nofollow" target="_blank">Colortip</a> - Created by <a href="http://tutorialzine.com" rel="nofollow" target="_blank">Martin Angelov</a> - Convert the title attributes of elements withing your page, into a series of colorful tooltips. It's great for giving definitions of words or giving extra info.
+							</li>
+							<li>
+								<a href="http://tympanus.net/codrops/2012/01/24/arctext-js-curving-text-with-css3-and-jquery/" rel="nofollow" target="_blank">ARCTEXT.JS</a> - Created by <a href="http://tympanus.net/codrops/author/pbotelho/" rel="nofollow" target="_blank">Pedro Botelho</a> - Allows you to arc and bend your text.
+							</li>
+						</ul>
+						
+						<h3>Touch & Swipe</h3>
+						<ul>
+							<li>
+								<a href="http://labs.rampinteractive.co.uk/touchSwipe/demos/" rel="nofollow" target="_blank">TouchSwipe</a> - Created by <a href="https://github.com/mattbryson" rel="nofollow" target="_blank">Matt Bryson</a> - Simple touch and swipe recognition plugin.
+							</li>
+							<li>
+								<a href="http://eightmedia.github.io/hammer.js/" rel="nofollow" target="_blank">Hammer.js</a> - Created by <a href="https://github.com/jtangelder" rel="nofollow" target="_blank">Jorik Tangelder</a> - A plugin for multi-touch gestures and touch actions.
+							</li>
+							<li>
+								<a href="http://www.idangero.us/sliders/swiper/" rel="nofollow" target="_blank">Swiper</a> - Created by <a href="https://github.com/nolimits4web" rel="nofollow" target="_blank">Vladimir Kharlampidi</a> -  Ultra lightweight mobile touch slider with hardware accelerated transitions (Supports almost any HTMl in the slider).
+							</li>
+						</ul>
+						
+						<h3>Scrolling</h3>
+						<ul>
+							<li>
+								<a href="http://markgoodyear.com/labs/scrollup/" rel="nofollow" target="_blank">ScrollUP</a> - Created by <a href="http://markgoodyear.com" rel="nofollow" target="_blank">Mark Goodyear</a> - A jQuery plugin that creates a popup button at bottom of screen and allows the reader to "click" and jump back to the top.
+							</li>
+							<li>
+								<a href="http://manos.malihu.gr/jquery-custom-content-scroller/" rel="nofollow" target="_blank">mCustomScrollbar</a> - Created by <a href="https://github.com/malihu" rel="nofollow" target="_blank">Malihu</a> - Used to create smooth scrolling effects and creates custom scroll bars [used on this website].
+							</li>
+							<li>
+								<a href="https://github.com/brandonaaron/jquery-mousewheel" rel="nofollow" target="_blank">jQuery-Mousewheel</a> - Created by <a href="http://brandonaaron.net/" rel="nofollow" target="_blank">Brandon Aaron</a> - A jQuery plugin that adds cross-browser mouse wheel support [used on this site]. (used by many other plugins to accomplish tasks with the mousewheel).
+							</li>
+							<li>
+								<a href="http://pagescroller.com/" rel="nofollow" target="_blank">PageScroller</a> - Created by <a href="http://www.dairien.com/" rel="nofollow" target="_blank">Dairien Boyd</a> - Smooth and Animated Page Scrolling.
+							</li>
+							<li>
+								<a href="http://markdalgleish.com/projects/stellar.js/" rel="nofollow" target="_blank">Stellar.js</a> - Created by <a href="http://markdalgleish.com/" rel="nofollow" target="_blank">Mark Dalgleish</a> - One of the best parallax scrolling plugins.
+							</li>
+							<li>
+								<a href="http://ianlunn.co.uk/plugins/jquery-parallax/" rel="nofollow" target="_blank">jQuery Parallax</a> - Created by <a href="http://www.ianlunn.co.uk/" rel="nofollow" target="_blank">Ian Lunn</a> - Create simple and smooth parallax scrolling effect.
+							</li>
+						</ul>
+						<br /><br /><br />
+					</div>
+					<div class="right">
+						<img src="images/plugins.jpg" alt="jQuery Plugins"/>
+						<span class="caption">  
+							<p>
+								<a href="http://www.istockphoto.com/stock-illustration-6365514-electric-outlet-shield.php" target="_blank" rel="nofollow">&copy;mikemcd </a>
+							</p>  
+						</span>  
+					</div>
+				</aside>
+		
+		
+		</article>
+		<article class="tutorial" id="examples">
+		<!-- jQuery Examples -->
+			<h1>jQuery</h1>
+			<section class="panel" id="1">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/hello-world.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+						
+							<h3>Using a simple button to add and remove class with "toggle"</h3>
+						<p>
+							The HTML and CSS mark-up is a regular &lt;button&gt; and a &lt;div&gt; with 2 defined CSS classes:
+						</p>
+						<h4>HTML</h4>
+						<xmp>	<input id="MyButton" type="button" value="Click me!" onclick="Toggle();" />
+		<div id="MyDiv" class="RedClass" >Hello World!</div></xmp>
+						<h4>CSS</h4>
+						<br />
+							<xmp>
+	.RedClass { background-color: Red;}
+	.BlueClass{ background-color: Blue; }
+							</xmp>
+						<p>
+							The only thing that has been added is in the button, a new line of code:
+						</p>
+							<xmp>	onclick="Toggle();"</xmp>
+						<p>
+							"onclick" is a jQuery command that activates a function when the element is clicked (in this case it is the button, but it can be anything). The function "<i>Toggle()</i>" is defined inside the "<i>&lt;script&gt;</i>" tags in our page. All jQuery script needs to be preceded by a $. 
+						</p>
+						<xmp>
+	<script>
+	   function Toggle(){
+		  $("#MyDiv").toggleClass("BlueClass");
+	   }
+	</script>
+						</xmp>
+						<p>
+							"Toggle()" use is to use the jQuery command "<i>.toggleClass</i>" and is selecting the any element that has the id "<b>MyDiv</b>". It does exactly what it says it does, it toggles a class on and off. When the button is clicked all elements with the id "myDiv" gain a 2nd class (in our case it is only our &lt;div&gt;):
+						</p>
+							<xmp><div id="MyDiv" class="RedClass BlueClass">Hello World!</div></xmp>
+						<p>
+							Since BlueClass is lower on our style sheet and is being activated by our jQuery, it take priority and changes the background. A second class removes the class.
+						</p>
+						<h3>That is a how to toggle a class on and off with a button</h3>
+					</div>
+					<div class="right">
+					<iframe width="100%" height="300" src="http://cdpn.io/ohsiu" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+					</div>
+				</div>
+			</section>
+			<section class="panel" id="2">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/toggle.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+						<h3>Hiding/Showing an Element</h3>
+						<p>
+							A great technique used with jquery is the ability to hide and/or show any element (img, text, div, etc) with any given criteria. You can have a box appear after a user scrolls so far down or if they click a button. The jQuery code is <span class="code">.hide()</span> to hide something and <span class="code">.show()</span> to show things; you can also use the <span class="code">.toggle()</span> command to turn on an off like a switch. 
+							<br /><br />
+							Lets create a a box that appears and hides on the click of a button.
+						</p>	
+						<p>
+							The first thing we need to do is create a button and a then a div to play hide and seek with. This time we'll make it an HTML5 button, because that is the best practice.
+						</p>
+						<h4>HTML</h4>
+							<xmp>
+	<button>Click me!</button>
+	<div id="mydiv">This is Only a Test</div>
+						</xmp>
+						<p>
+							Now for some CSS to make the div look pretty and make a letterpress text effect.
+						<h4>CSS</h4>
+<xmp>
+	#mydiv {
+		height:200px;
+		width:400px;
+		background: #323232;
+		color:#222;
+		text-shadow: 0px 1px 2px #555;
+		display:none;
+		text-align:center;
+		line-height:4em;
+		font-size:3em;
+	}
+</xmp>
+						<p>
+							Now we have our CSS and HTML and our div is hidden. No for the jQuery. Unlike before we didn't attached an <span class="code">onclick</span> function to our button, doing this means all we have to do is declare a function and what that function does. So we're going to tell the browser that when the HTML5 button is pressed <span class="code">$('button').click(function () {</span> that it needs to preform a function, and that function is to <span class="code">.toggle()</span> the visibility of the div.
+						</p>
+						<h4>jQuery</h4>
+<xmp>
+	$('button').click(function () {
+		$('#mydiv').toggle()
+	});
+</xmp>
+					<p>
+						Now that we have that setup, you could easily switch <span class="code">.toggle()</span> out for <span class="code">.slideToggle()</span> or <span class="code">.fadeToggle()</span> to make it animated. Each of these functions also have functions that can specify time it takes to appear and more.
+					</div>
+					<div class="right">
+						<h4>.toggle()</h4>
+						<iframe width="100%" height="220" src="http://cdpn.io/EHgph" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						<h4>.slideToggle</h4>
+						<iframe width="100%" height="220" src="http://cdpn.io/ELlzu" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						<h4>.fadeToggle()</h4>
+						<iframe width="100%" height="220" src="http://cdpn.io/vDCue" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+					</div>
+				</div>
+			</section>
+			<section class="panel" id="3">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/scroll.png" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+						<h3>Make an Element Appear at a Certain Scroll Point</h3>
+						<p>
+							So something that is always aesthetically pleasing is to create an event that is triggered by scrolling. Now there are may methods to go about doing this, but this is a quick, simple, and easy way. For this we need to use the <span class="code">$(window).scroll(function() {</span> command. So for this we're going to have button fade in if the user has scrolled more than 300px from the top of the page; and then we're going to also say if the user scrolls more than 1000px from the top it will fade back out. This is also a bit tricky, the key to the pixels is the offset from the scroll, meaning it isn't 100% exact like a div; though you can fix that problem too with more coding.
+							<br /><br />
+							The first thing we need is to setup our button and make our page long enough.
+						</p>
+						<h4>HTML</h4>
+						<xmp>
+	<div id="mydiv">
+		<button>Click Me!</button>
+		<p>
+			This is Only a Test
+		</p>
+	</div>
+						</xmp>
+						<h4>CSS</h4>
+						<xmp>
+	body {
+		height: 2000px;
+	}
+
+	button { 
+		position:fixed; 
+		top:20px; 
+		left:30px;
+		display:none;
+	}
+
+	#mydiv {
+		background:red;
+		height:1000px;
+		width:500px;
+	}
+						</xmp>
+						<p>
+							So now we have a small setup to see what's going on, we can throw in a bit of jQuery. The first thing is setting up the variable for the Y-axis scrolling, so the browser knows to watch the distance of the scroll. <span class="code">var y_axis = window.pageYOffset;</span> using that code the browser will look for the scroll distance and store the information. All that's left to do is provide and if/else statement with the distances we want, followed by the function to preform.
+						</p>
+						<h4>jQuery</h4>
+<xmp>
+	$(window).scroll(function() {
+		var y_axis = window.pageYOffset;           
+
+		if(y_axis > 300 && y_axis < 1000) {
+			$('button').fadeIn();
+		}
+		else {
+			$('button').fadeOut();
+		}
+	});
+</xmp>
+					<p>
+						And that is all there is. No when the scroll point gets past 300px the button will fade in, but if it scrolls more than 1000px it will fade back out.
+					</p>
+					</div>
+					<div class="right">
+						<h3></h3>
+						<iframe width="100%" height="450" src="http://cdpn.io/tpidB" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+					</div>
+				</div>
+
+			</section>
+			<section class="panel" id="4">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/loader.gif" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3>Animating</h3>
+							<p>
+								The next big jQuery use is animating. With jQuery you can animate objects with very little code.
+								<br />
+								So lets animate a square div 85% of the container and have it take 1 second to get to the end and then take 2 seconds to come back to its original position.
+								<br /><br />
+								Create a basic div with a button to activate the animation. <i>(You can set the parameters to anything really, you can it based on a link or if a person scrolls so far down the page, etc...)</i>
+							</p>
+							<h4>HTML</h4>
+						<xmp>
+	<button>Start Animation</button>
+	<div id="mydiv">
+		Testing
+	</div>
+						</xmp>
+						<p>
+							Now add the styles to the div.
+						</p>
+						<h4>CSS</h4>
+						<xmp>
+	#mydiv {
+		background:#98bf21;
+		height:4em;
+		width:4em;
+		position:relative !important;
+		line-height:4em;
+		font-size:1.5em;
+		text-align:center;
+		margin:15px 0;
+	}
+						</xmp>
+						<p>
+							No we have a nice green square box with some centered text inside. 
+							<br /><br />
+							<b>Note the position property has to be set!</b>
+							<br /><br />
+							Now lets add the script. We're going to use the <span class="code">.animate()</span> command and give the information needed, <span class="code">.animate( properties, duration)</span>. The animate command has many other available options, go to the <a href="http://api.jquery.com/animate/" rel="nofollow" target="_blank">jQuery website</a> for more information about the command. For our purposes we're going to just give it a left css property and a time to complete the trasition.
+						</p>
+						<h4>jQuery</h4>
+<xmp>
+	$(document).ready(function(){
+	  $("button").click(function(){
+		$('div').animate({left:'90%'}, 1000);
+		$('div').animate({left:'0'}, 2000); 
+	  });
+	});
+</xmp>
+					<p>
+						Now it will go to one end and then back in a span of 3 seconds.
+					</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="450" src="http://cdpn.io/IcyhD" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+
+			</section>
+			<section class="panel" id="5">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/slidejs2.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+						<h3>Using Slide.js Plugin</h3>
+						<p>
+							To setup the plugin, download the js file required into your "js" folder and link to it (or link directly to the developers github repository that hosts it.
+							[below is how you would link to slide.js directly from the developer's (<a href="https://github.com/nathansearles" rel="nofollow" target="blank">Nathan Searles's</a>) git repository].
+						</p>	
+							<xmp><head>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		 <script src="https://rawgithub.com/nathansearles/Slides/SlidesJS-3/source/jquery.slides.min.js"></script>
+	</head></xmp>
+						<p>
+							After you have linked to the plugin (that you either downloaded to your "js" folder or directly from their page), you just need to follow the code he provides on his website and on his github repository.
+							<br />
+							If you literally copy & paste his exact example code, you get the first example on the right.
+							<br />
+							Also add a bit of extra CSS for the "unordered list"
+							<br /><br />
+						</p>
+							<code class="code">
+								ul{list-style: none; float:right;}
+								li{float:left;}
+							</code>
+						
+						<h3>What's Next?</h3>
+						<p>
+							Next we can customize the CSS for this plugin. (I just viewed the source for his display slider on his website and used the CSS code.
+							<br /><br />
+							After we get a look that we like, we can now go through and change out the images. Rplace the placeholder images with your images (from online or your "images" folder).
+							<br />
+							After we have switched out the images you are free to move the slideshow around.
+						</p>
+					</div>
+					<div class="right">
+						<h3>Example 1</h3>
+						<iframe width="100%" height="500" src="http://cdpn.io/evfzG" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						<h3>Example 2</h3>
+						<iframe width="100%" height="500" src="http://cdpn.io/tBijm" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+					</div>
+				</div>
+
+			</section>
+			<section class="panel" id="6">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+
+			</section>
+			<section class="panel" id="7">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+			</section>
+			
+			<!-- Extra Slots -->
+			<section class="panel" id="8">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+			</section>
+			<section class="panel" id="9">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+			</section>
+			<section class="panel" id="10">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+				
+			</section>
+			<section class="panel" id="11">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+				
+			</section>
+			<section class="panel" id="12">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+				
+			</section>
+			<section class="panel" id="13">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+				
+			</section>
+
+			<!-- CSS3 Examples -->
+			<h1 id="clear">CSS3</h1>
+			<section class="panel" id="13">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/before-after.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3>Pseudo Elements</h3>
+							<p>
+								One of the big advantages to come from CSS3 are the new pseudo elements. ":focus, :first-letter, :first-line, :first-child, :before, :after" they are named for their functions (you can find them all <a href="http://www.w3schools.com/css/css_pseudo_elements.asp" rel="nofollow" target="blank">here</a>). 
+								<br /><br />
+								The best used two are the ":after" and ":before" elements. With these we can create extra elements around our existing elements. These two are generally used for extra decorations or to create close buttons (like used in this div on the top right). The most common usage is to create speech bubbles, icons/extra buttons, <a href="http://www.paulund.co.uk/creating-different-css3-box-shadows-effects" rel="nofollow" target="blank">3D shadow effects</a>, or ribbon navigation bars. You can see a speech bubble to the right. 
+								<br /><br />
+								Why don't we just create a simple icon outside of a nav element to give it some flare.
+								<br /><br />
+								First we're going to need a simple navigation setup.
+							</p>
+							<h4>HTML</h4>
+						<xmp>
+	<ul>
+		<li class="play"><a href="#non">Play</a></li>
+		<li class="stop"><a href="#non">Stop</a></li>
+		<li class="pause"><a href="#non">Pause</a></li>
+	</ul>
+
+						</xmp>
+						<p>
+							SO first thing we have to so is setup our listed items. We want them off the wall and have a big enough height to match our icons. <span class="code">margin-left:20px; height:25px;</span> 
+							<br />
+							Next we set the parameters for all the pseudo elements. we know our icons are roughly 15x20 pixels and we need them off the wall too. We are using absolute positioning so they are easier to deal with and to move around; as well as if they aren't absolute positioned then we can't have blank spaces in the content property (the content property is the key element for pseudo classes).
+						</p>
+						<xmp>
+	li:before {
+		content: " ";
+		position:absolute;
+		left:2px;
+		background: #888 url('http://us.cdn2.123rf.com/168nwm/ionprodan/ionprodan1103/ionprodan110300042/9023096-set-of-player-icons-such-as-play-pause-and-other.jpg');
+		width: 15px;
+		height: 20px;
+		
+	}
+						</xmp>
+						<p>
+							now that we have set our background and our positioning; plus the sizes of all our pseudo elements, all we need to do is move the background around with the <span class="code">background-position:</span> property in the CSS.
+						<br /><br />
+							when it's all together it looks like this:
+						</p>
+						<h4>CSS</h4>
+						<xmp>
+	li {margin-left:20px; height:25px;}
+
+	li:before {
+		content: " ";
+		position:absolute;
+		left:2px;
+		background: #888 url('http://us.cdn2.123rf.com/168nwm/ionprodan/ionprodan1103/ionprodan110300042/9023096-set-of-player-icons-such-as-play-pause-and-other.jpg');
+		width: 15px;
+		height: 20px;
+		
+	}
+
+	.play:before {
+		background-position: -30px 0;
+	}
+
+	.pause:before {
+		background-position: -52px -2px;
+	}
+
+	.stop:before{
+		background-position: -104px 0;
+	}
+						</xmp>
+						<p>
+							And that is it. No extra elements, or jQuery needed.
+						</p>
+						</div>
+						<div class="right">
+							<h3>Speech Bubble</h3>
+							<iframe width="100%" height="300" src="http://cdpn.io/EIkFC" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+							<h3>Extra Flare to a Nav</h3>
+							<iframe width="100%" height="300" src="http://cdpn.io/oFdjI" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+
+			</section>
+			<section class="panel" id="14">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/selector.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3>General and Adjacent Sibling Combiners && Child combinators</h3>
+							<p>
+								A Child Combinator describes a childhood relationship between two elements. You can select an element that is a descendant of an another element to make conditional CSS. The way it is denoted is by the usage of the "greater-than sign" (&gt;). Say you have several elements nested with other elements. (
+								<br /><br />
+								<i>e.g. a bunch of &lt;p&gt; elements nested within a div, but in than div is more divs with other &lt;p&gt; elements. Instead of going through and adding classes to all the ones that direct children of the first div and adding a class, you can just use a sibling combiner to select those &lt;p&gt; that are direct children of the div.</i>
+								<br />
+								<b>See Example 1</b>
+							</p>
+							<h4>HTML</h4>
+						<xmp>
+	<div id="one">
+		<p>Paragraph one</p>
+		<div>
+			<p>Paragraph two</p>
+		</div>
+		<p>Paragraph three</p>
+		<div>
+			<p>Paragraph four</p>
+		</div>
+		<p>Paragraph five</p>
+		<div>
+			<p>Paragraph six</p>
+		</div>
+		<p>Paragraph seven</p>
+		<div>
+			<p>Paragraph eigh</p>
+		</div>
+	</div>
+		
+	<div id="two">
+		<p>Paragraph one</p>
+		<div>
+			<p>Paragraph two</p>
+		</div>
+		<p>Paragraph three</p>
+		<div>
+			<p>Paragraph four</p>
+		</div>
+		<p>Paragraph five</p>
+		<div>
+			<p>Paragraph six</p>
+		</div>
+		<p>Paragraph seven</p>
+		<div>
+			<p>Paragraph eigh</p>
+		</div>
+	</div>
+						</xmp>
+							<p>
+								we want only the &lt;p&gt; that are direct children of the div; one, three, five, and seven. Using this a child combiner we can target them all with one line of code: <span class="code">#two > p { background:blue; }</span>. This finds all those &lt;p&gt; elements and turns their background blue.
+							<h4>CSS</h4>
+						<xmp>
+	#one { height:300px; background:blue; width:25%; float:left;}
+
+	p { color:white; background:#333; height:15%; text-align:center; line-height:2em;}
+
+	div > div {  height:15%; background:#333; }
+
+	#two { height:300px; background:blue; width:25%; float:left; margin-left:20px;}
+
+	#two > p { background:blue; }
+						</xmp>
+							<p>
+								General and Adjacent Sibling Combiners work in a similar fashion to Child Combiners. There are two different sibling combinators: the adjacent sibling combinator and the general sibling combinator. In both cases, non-element nodes (e.g. text between elements) are ignored when considering adjacency of elements.
+								<br /><br />
+								<b>The adjacent sibling combinator</b> is made of the "plus sign" (+) character that separates two sequences of simple selectors. The elements represented by the two sequences share the same parent in the document tree and the element represented by the first sequence immediately precedes the element represented by the second one. 
+								<br /><br /> 
+								Broken down, this means that the an element will find the nearest sibling that matches the criteria and select it. <span class="code">p:first-of-type + div</span> this will find the first &lt;p&gt; element and then find the closest div in the same level and target it for modification
+								<b>See Example 2</b>
+								<br /><br />
+								<b>The general sibling combinator</b> is made of the "tilde" (~) character that separates two sequences of simple selectors. The elements represented by the two sequences share the same parent in the document tree and the element represented by the first sequence precedes (not necessarily immediately) the element represented by the second one.
+								<br /><br />
+								Meaning that <span class="code">#two p ~ div</span> will find all of its immediate siblings and target them for alteration.
+						</div>
+						<div class="right">
+							<h3>Child Combinators</h3>
+							<iframe width="100%" height="300" src="http://cdpn.io/opJAq" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+							<h3>Adjacent Sibling</h3>
+							<iframe width="100%" height="300" src="http://cdpn.io/wjHEl" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+							<h3>General Sibling</h3>
+							<iframe width="100%" height="300" src="http://cdpn.io/opJAq" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+
+			</section>
+			<section class="panel" id="15">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/transition.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3>Transitions</h3>
+							<p>
+								CSS3 has made it possible to stop relying so much on jQuery (it can slow a web page down), we can now create transition effects and more all with CSS. Like the jQuery example of a slide out div, that can be created with some quick and easy CSS3.
+								<br /><br />
+								Since we're not using jQuery, we have no need to have a button, instead we just need a check box input.
+							</p>
+							<h4>HTML</h4>
+						<xmp>
+	<input type="checkbox" name="chk" id="toggle-1" >
+	<div id="slide">
+	  <p>
+		Some Text
+	  </p>
+	</div>
+						</xmp>
+							<p>
+								And now to give it some style
+							</p>
+							<h4>CSS</h4>
+						<xmp>
+	#slide { 
+		display:block; 
+		height: 0px;
+		width:300px;
+		background:#333;
+		color:#fff; 
+	}
+
+	input#toggle-1:checked ~ #slide {
+		position:relative;
+		height: 200px;
+		display:block;
+		width:300px;
+	}
+
+	input, div {margin-left:25px;}
+						</xmp>
+							<p>
+								Now our checkbox switches on and off the height of the div. Now we just need to animate it with some transitions. We add them to #slide.
+							</p>	
+							<xmp>
+	#slide { 
+		display:block; 
+		height: 0px;
+		width:300px;
+		background:#333;
+		color:#fff; 
+		transition: all .7s ease-out;
+	}
+						</xmp>
+							<p>
+								And that is all, that 1 line of code adds the animation ability to the #slide div. There are in some cases need of adding multiple versions of that code with "vendor prefixes" to allow it to animate on other browsers like Internet Explorer and Mozilla. You can use http://cssprefixer.appspot.com/ to help you fix your code when needed.
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="http://cdpn.io/uIJba" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+
+			</section>
+			<section class="panel" id="16">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/nth-child.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3>:nth-child Selector</h3>
+							<p>
+								This is by far an amazing asset to web development. Using the :nth-child selector you can now select the first child, all the even (or odd) children, even use mathematical equations to select ever 5/6/7th child, last child, and more. A great use for it is if you have a list or a bunch of elements listed and you want some seperation between them all, to show there are different sections or parts.
+								<br /><br />
+								Assume you have a standard unorded list with a lot of list elements in it with a bunch of information or you're using it as a slide holder. To show a seperation between all the children, you would normally have to add a class to ever-other list element and then style. With the <span class="code">:nth-child(odd)</span> and/or <span class="code">:nth-child(even)</span> to sperate them in some fashion. Along with <span class="code">:nth-child</span> there is also <span class="code">:last-child</span> and <span class="code">:first-child</span>. You can also use the similar pseudo selectors to select the first line or first letter of an element.
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="http://cdpn.io/iqkAl" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+
+			</section>
+			<section class="panel" id="17">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/target.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3>:target</h3>
+							<p>
+								Another great attribute to CSS3 was the <span class="code">:target</span> selector. For in-line anchor links you can control what happens to it when selected, this is especially handy when using single page navigation/narration. As well as it can be use to highlight the section your pointed to. See the example.
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="http://cdpn.io/FLJGC" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+			</section>
+			
+			<!-- Extra Slots -->
+			<section class="panel" id="18">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+				
+			</section>
+			<section class="panel" id="19">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+				
+			</section>
+			<section class="panel" id="20">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+
+			</section>
+			<section class="panel" id="21">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+				
+			</section>
+			<section class="panel" id="22">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+				
+			</section>
+			<section class="panel" id="23">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+				
+			</section>
+			<section class="panel" id="24">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+				
+			</section>
+			<section class="panel" id="25">
+				<span class="close"></span>
+				<div class="front">
+					<img src="images/image.jpg" class="fig" />
+				</div>
+				<div class="back">
+					<div class="about">
+							<h3></h3>
+							<p>
+								
+							</p>
+						</div>
+						<div class="right">
+							<h3></h3>
+							<iframe width="100%" height="300" src="" allowfullscreen="allowfullscreen" frameborder="0" seamless="seamless"></iframe>
+						</div>
+				</div>
+				
+			</section>
+		</article>
+		<div id="clear"></div>
+
+		<footer>
+		<address>
+		&copy; <a href="mailto:trevor.d.elliott@gmail.com" target="_blank">Haka Inc</a> <time datetime="2013-01-12" class="published">2013</time>
+		</address>
+		<p>images &copy; their respective owners</p>
+		</footer>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				var $container	= $('#examples'),
+					$articles	= $container.children('.panel'),
+					timeout;
+
+				$articles.on( 'mouseenter', function( event ) {
+
+					var $article	= $(this);
+					clearTimeout( timeout );
+					timeout = setTimeout( function() {
+
+						if( $article.hasClass('active') ) return false;
+
+						$articles.not( $article.removeClass('blur').addClass('active') )
+								.removeClass('active')
+								.addClass('blur');
+
+					}, 65 );
+
+				});
+
+				$articles.on( 'mouseleave', function( event ) {
+
+					clearTimeout( timeout );
+					$articles.removeClass('active blur');
+
+				});
+
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+				$('.close').click(function() {
+					$(this).parent('section').toggleClass('active2');
+					$(this).parent('section').siblings().not(this).toggleClass('hide2');
+				});
+				$('.front').click(function() {
+					$(this).parent('section').toggleClass('active2');
+					$(this).parent('section').siblings().not(this).toggleClass('hide2');
+				});
+			});
+		</script>
+				
+		<script>
+			$(document).ready(function(){
+				$(".panel").each(function(){
+					if (!$(this).text().trim().length) {
+						$(this).hide();
+					}
+				});
+			});
+		</script>
+				
+
+		
+		
+		
+		<!-- Clock & Date -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// Create two variable with the names of the months and days in an array
+				var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
+				var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+				// Create a newDate() object
+				var newDate = new Date();
+				// Extract the current date from Date object
+				newDate.setDate(newDate.getDate());
+				// Output the day, date, month and year   
+				$('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+
+				setInterval( function() {
+					// Create a newDate() object and extract the seconds of the current time on the visitor's
+					var seconds = new Date().getSeconds();
+					// Add a leading zero to seconds value
+					$("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+					},1000);
+
+				setInterval( function() {
+					// Create a newDate() object and extract the minutes of the current time on the visitor's
+					var minutes = new Date().getMinutes();
+					// Add a leading zero to the minutes value
+					$("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
+					},1000);
+
+				setInterval( function() {
+					// Create a newDate() object and extract the hours of the current time on the visitor's
+					var hours = new Date().getHours();
+					// Add a leading zero to the hours value
+					$("#hours").html(( hours < 10 ? "0" : "" ) + hours);
+					}, 1000);	
+			});
+		</script>
+		<!-- Clock/Date -->
+	</body>
+</html>
