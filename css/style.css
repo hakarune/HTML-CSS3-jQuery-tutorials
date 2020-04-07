@@ -176,7 +176,7 @@ section.active{
 	position: relative;
 	top: 90px;
 	width: 97%;
-	height: 78%;
+	height: 60%;
 	margin: 0 auto;
 	z-index:2;
 	-webkit-transition: all .7s ease-out;
