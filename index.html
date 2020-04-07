@@ -1044,8 +1044,45 @@
 					<div class="about">
 							<h3>:target</h3>
 							<p>
-								Another great attribute to CSS3 was the <span class="code">:target</span> selector. For in-line anchor links you can control what happens to it when selected, this is especially handy when using single page navigation/narration. As well as it can be use to highlight the section your pointed to. See the example.
+								Another great attribute to CSS3 was the <span class="code">:target</span> selector. For in-line anchor links you can control what happens to it when selected, this is especially handy when using single page navigation/narration. As well as it can be use to highlight the section your pointed to. See the example.<br /><br />
+								<b>HTML:</b>
 							</p>
+							<xmp>
+<ul id="nav">
+  <li><a href="#1">1</a></li>
+  <li><a href="#2">2</a></li>
+  <li><a href="#3">3</a></li>
+  <li><a href="#4">4</a></li>
+  <li><a href="#5">5</a></li>
+  <li><a href="#6">6</a></li>
+  <li><a href="#7">7</a></li>
+  <li><a href="#8">8</a></li>
+  <li><a href="#9">9</a></li>
+</ul>
+<ul id="container">
+  <li id="1">Paragraph 1</li>
+  <li id="2">Paragraph 2</li>
+  <li id="3">Paragraph 3</li>
+  <li id="4">Paragraph 4</li>
+  <li id="5">Paragraph 5</li>
+  <li id="6">Paragraph 6</li>
+  <li id="7">Paragraph 7</li>
+  <li id="8">Paragraph 8</li>
+  <li id="9">Paragraph 9</li>
+</ul>
+							</xmp>
+							<p>
+								<b>CSS:</b>
+							</p>
+							<xmp>
+li:target {
+  background:red !important;
+  -webkit-transform: translateX(20px); 
+  -moz-transform: translateX(20px); 
+  -ms-transform: translateX(20px); 
+  -o-transform: translateX(20px);     
+}
+							</xmp>
 						</div>
 						<div class="right">
 							<h3></h3>
